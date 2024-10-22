@@ -3,16 +3,18 @@ body {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     height: 100vh; /* Full viewport height */
-    background-color: #f5f5dc; /* Beige background color */
+    background-color: #DBCFB0; /* Beige background color */
     margin: 0; /* Remove default margin */
 }
 
 .header {
-    background-color: #ccc; /* Grayish color for the top box */
+    background-color: #90B494; /* Grayish color for the top box */
     padding: 10px; /* Space around the content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     width: 100%; /* Full width */
+    text-align: center; /* Center text horizontally */
 }
+
 
 .buttons {
     display: flex;
@@ -35,21 +37,7 @@ body {
     height: auto; /* Maintain aspect ratio */
 }
 
-.btn {
-    background-color: #007bff; /* Blue */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Button Styles (unchanged from your original code) */
+/* Button Styles (new button) */
 .buttons button {
     width: 150px;
     height: 50px;
@@ -71,8 +59,7 @@ body {
     border-radius: 3px;
 }
 
-.buttons button:before,
-.buttons button:after {
+.buttons button:before, .buttons button:after {
     content: "";
     position: absolute;
     width: 0;
@@ -103,8 +90,7 @@ body {
     z-index: 1;
 }
 
-.buttons button span:before,
-.buttons button span:after {
+.buttons button span:before, .buttons button span:after {
     content: "";
     position: absolute;
     width: 2px;
@@ -133,8 +119,7 @@ body {
     height: 100%;
 }
 
-.buttons button p:before,
-.buttons button p:after {
+.buttons button p:before, .buttons button p:after {
     position: absolute;
     width: 100%;
     transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
@@ -154,8 +139,7 @@ body {
     color: #44d8a4;
 }
 
-.buttons button:hover:before,
-.buttons button:hover:after {
+.buttons button:hover:before, .buttons button:hover:after {
     width: 100%;
 }
 
@@ -163,8 +147,7 @@ body {
     z-index: 1;
 }
 
-.buttons button:hover span:before,
-.buttons button:hover span:after {
+.buttons button:hover span:before, .buttons button:hover span:after {
     height: 100%;
 }
 
@@ -205,8 +188,7 @@ body {
     }
 }
 
-.buttons button.start:hover:before,
-.buttons button.start:hover:after {
+.buttons button.start:hover:before, .buttons button.start:hover:after {
     display: none;
 }
 
