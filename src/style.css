@@ -1,40 +1,51 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    height: 100vh; /* Full viewport height */
-    background-color: #DBCFB0; /* Beige background color */
-    margin: 0; /* Remove default margin */
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F5F5DC;
+    margin: 0;
 }
 
 .header {
-    background-color: #90B494; /* Grayish color for the top box */
-    padding: 10px; /* Space around the content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    width: 100%; /* Full width */
-    text-align: center; /* Center text horizontally */
+    background-color: #90B494;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
 }
-
 
 .buttons {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Space between buttons */
-    margin-top: 20px; /* Space below the header */
-    flex-grow: 1; /* Allow buttons to grow and fill the remaining space */
+    justify-content: middle; /* Horizontally center the button */
+    align-items: middle; /* Vertically center the button */
 }
 
 .spotify-button {
-    display: flex; /* Ensure the image is centered in the anchor */
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid #1DB954;
+    border-radius: 5px;
+    color: #1DB954;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spotify-button:hover {
+    background-color: #1DB954;
+    color: white;
 }
 
 .spotify-logo {
-    width: 40px; /* Adjust logo size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
 }
 
 /* Button Styles (new button) */
@@ -203,4 +214,72 @@ body {
 
 .buttons button:focus {
     outline: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjusts the height to center */
+}
+
+.spotify-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid #1DB954;
+    border-radius: 5px;
+    color: #1DB954;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spotify-button:hover {
+    background-color: #1DB954;
+    color: white;
+}
+
+.spotify-logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Album Covers Scroll */
+.album-container {
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    margin-top: 50 px;
+}
+
+.album-title {
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Adjust the font size */
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 20px; /* Space below the title */
+    text-decoration: underline; /* Underline the title */
+}
+
+
+.album-covers {
+    display: flex; /* Keep images in a row */
+    justify-content: center; /* Center images */
+    align-items: center; /* Align items vertically */
+    transition: transform 1s ease; /* Smooth transition for images */
+}
+
+.album-covers img {
+    flex: 1; /* Allow images to grow and fill the space */
+    width: 120px; /* Set the base size for the images */
+    max-width: 120px; /* Ensure images don't grow too large */
+    margin: 0 20px; /* Space between images */
+    transition: width 0.5s ease, opacity 0.5s ease; /* Smooth width and opacity transition */
+    opacity: 0.3; /* Dim non-focused images */
+}
+
+.album-covers img.active {
+    width: 180px; /* Make the active image larger while keeping aspect ratio */
+    opacity: 1; /* Full opacity for the active image */
 }
